@@ -1,0 +1,294 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* style - mobile */
+
+body {
+    background-color: #F5F7F6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+#banner {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 1em;
+}
+
+#header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Gluten", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.5em;
+    font-style: normal;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Gluten", serif;
+    font-size: 10vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4vw;
+}
+
+h2 #space {
+    width: 100%; 
+    display: block;
+}
+
+h2 span {
+    display: inline-block;
+    animation: stretchAnimation 2s infinite alternate;
+}
+
+h2 span:nth-child(odd) {
+    animation-name: stretchUp;
+}
+
+h2 span:nth-child(even) {
+    animation-name: stretchDown;
+}
+
+@keyframes stretchUp {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(1.5); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes stretchDown {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0.5); }
+    100% { transform: scaleY(1); }
+}
+
+/* main contents*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    padding-top: 2em;
+    background-color: #fefefe;
+}
+
+.exercise {
+    width: 100%;
+    max-width: 500px;
+}
+
+.exercise h3 {
+    font-family: "Gluten", serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.exercise .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em;
+}
+
+.exercise svg {
+    width: 24px;
+    height: auto;
+}
+
+.exercise hr {
+    display: none;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
+    list-style: none;
+}
+
+.exercise a {
+    font-family: "Manjari", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    background-color: #F5F7F6;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.exercise a:hover {
+    background-color: #d7dedb;
+}
+
+
+#main-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    width: 70%;
+    padding: 0 1em 2em;
+}
+
+#main-top {
+    width: 70%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin-top: 0;
+    padding: 2em 1em;
+    text-align: center;
+    gap: 0.5em;
+}
+
+footer p, footer a {
+    font-family: "Manjari", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0;
+    color: #000;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    #banner {
+        width: 1100px;
+        height: 250px;
+    }
+
+    #header-top {
+        flex-direction: row;
+        gap: 10em;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h2 {
+        font-size: 6vw;
+        flex-wrap: nowrap;
+    }
+
+    h2 #space {
+        width: 0.2em; 
+        height: auto;
+        display: inline-block；
+    }
+
+    main {
+        gap: 4em;
+        margin-top: 2em;
+        padding-top: 2em;
+    }
+
+    .exercise h3 {
+        font-size: 2em;
+    }
+
+    .exercise .title {
+        flex-direction: row;
+        gap: 10em;
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    .exercise hr {
+        display: block;
+        border-top: 2px solid #171414;
+        width: 26em;
+    }
+
+    .exercise svg {
+        width: 10%;
+    }
+
+    .exercise a {
+        font-size: 1.2em;
+    }
+
+    #main-top {
+        width: 70%;
+        margin: auto;
+    }
+
+    #main-bottom {
+        flex-direction: row;
+        gap: 4em;
+        width: 70%;
+        margin: auto;
+        justify-content: center;
+    }
+
+}
