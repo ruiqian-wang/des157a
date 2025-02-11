@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Date with Your Pet - MadLibs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gluten&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="../v2-final/style.css" rel="stylesheet">
+
+    <script src="../v2-final/script.js" defer></script>
+</head>
+
+<body>
+    <header>A Date with Your Pet</header>
+        
+    <main>
+            <div class="pet-image">
+                <img id="pet-image" src="images/pet.png" alt="pet image" width="400" height="400">
+            </div>
+            
+            <form id="form-all">
+                <div class="form-grid">
+                    <div class="form">
+                        <label for="animal">A common or exotic pet</label>
+                        <input type="text" id="animal" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="emotion">An emotion your pet might feel</label>
+                        <input type="text" id="emotion" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="place">A specific type of place</label>
+                        <input type="text" id="place" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="food">A type of food or drink</label>
+                        <input type="text" id="food" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="verb">A past-tense action</label>
+                        <input type="text" id="verb" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="activity">A public event</label>
+                        <input type="text" id="activity" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="object">An object to find in a bag</label>
+                        <input type="text" id="object" required>
+                    </div>
+
+                    <div class="form">
+                        <label for="action">An -ing action </label>
+                        <input type="text" id="action" required>
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div class="output-container">
+                <div class="story">
+                    <p>You and your lovable <span class="highlight" id="animal-output"></span> planned the perfect date at a <span class="highlight" id="place-output"></span>. Everything was going smoothly until your <span class="highlight" id="animal-output2"></span> accidentally <span class="highlight" id="verb-output"></span>.</p>
+    
+                    <p>As you scrambled to fix the situation, you realized you had packed a <span class="highlight" id="object-output"></span> in your bag instead of something practical. While you panicked, your <span class="highlight" id="animal-output3"></span> was feeling <span class="highlight" id="emotion-output"></span> and munching on your <span class="highlight" id="food-output"></span>.</p>
+    
+                    <p>Just when you thought the chaos couldn't escalate, a <span class="highlight" id="activity-output"></span> begins, and to everyone's surprise, your <span class="highlight" id="animal-output4"></span> starts <span class="highlight" id="action-output"></span>!</p>
+    
+                    <p>In the end, the date concluded with your <span class="highlight" id="animal-output5"></span> being cheered on by the whole <span class="highlight" id="place-output2"></span> crowd. It may not have been the romantic evening you imagined, but it was a date to remember!</p>
+
+                </div>
+                <button id="play-again">Play Again</button>
+            </div>
+
+            <div class="circle" id="circle-1"></div>
+            <div class="circle" id="circle-2"></div>
+            <div class="circle" id="circle-3"></div>
+            <div class="circle" id="circle-4"></div>
+            <div class="circle" id="circle-5"></div>
+
+    </main>
+
+
+</body>
+</html>
