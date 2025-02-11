@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Gluten&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link href="../v1/codev1style.css" rel="stylesheet">
+
+    <script src="../v1/script.js" defer></script>
 </head>
 
 <body>
@@ -18,23 +20,23 @@
         
     <main>
             <div class="pet-image">
-                <img src="images/pet.png" alt="pet image" width="400" height="400">
+                <img id="pet-image" src="images/pet.png" alt="pet image" width="400" height="400">
             </div>
             
             <form id="form-all">
                 <div class="form-grid">
                     <div class="form">
-                        <label for="animal">Name an animal</label>
+                        <label for="animal">A common or exotic pet</label>
                         <input type="text" id="animal" required>
                     </div>
 
                     <div class="form">
-                        <label for="emotion">An emotion</label>
+                        <label for="emotion">An emotion your pet might feel</label>
                         <input type="text" id="emotion" required>
                     </div>
 
                     <div class="form">
-                        <label for="place">Name a specific type of place</label>
+                        <label for="place">A specific type of place</label>
                         <input type="text" id="place" required>
                     </div>
 
@@ -44,28 +46,42 @@
                     </div>
 
                     <div class="form">
-                        <label for="verb">A past tense verb</label>
+                        <label for="verb">A past-tense action</label>
                         <input type="text" id="verb" required>
                     </div>
 
                     <div class="form">
-                        <label for="event">A random event</label>
-                        <input type="text" id="event" required>
+                        <label for="activity">A public event</label>
+                        <input type="text" id="activity" required>
                     </div>
 
                     <div class="form">
-                        <label for="object">A unexpected object</label>
+                        <label for="object">An object to find in a bag</label>
                         <input type="text" id="object" required>
                     </div>
 
                     <div class="form">
-                        <label for="action">An unexpected action</label>
+                        <label for="action">An -ing action </label>
                         <input type="text" id="action" required>
                     </div>
                 </div>
 
                 <button type="submit">Submit</button>
             </form>
+
+            <div class="output-container">
+                <div class="story">
+                    <p>You and your lovable <span class="highlight" id="animal-output"></span> planned the perfect date at a <span class="highlight" id="place-output"></span>. Everything was going smoothly until your <span class="highlight" id="animal-output2"></span> accidentally <span class="highlight" id="verb-output"></span>.</p>
+    
+                    <p>As you scrambled to fix the situation, you realized you had packed a <span class="highlight" id="object-output"></span> in your bag instead of something practical. While you panicked, your <span class="highlight" id="animal-output3"></span> was feeling <span class="highlight" id="emotion-output"></span> and munching on your <span class="highlight" id="food-output"></span>.</p>
+    
+                    <p>Just when you thought the chaos couldn't escalate, a <span class="highlight" id="activity-output"></span> begins, and to everyone's surprise, your <span class="highlight" id="animal-output4"></span> starts <span class="highlight" id="action-output"></span>!</p>
+    
+                    <p>In the end, the date concluded with your <span class="highlight" id="animal-output5"></span> being cheered on by the whole <span class="highlight" id="place-output2"></span> crowd. It may not have been the romantic evening you imagined, but it was a date to remember!</p>
+
+                </div>
+                <button id="play-again">Play Again</button>
+            </div>
 
             <div class="circle" id="circle-1"></div>
             <div class="circle" id="circle-2"></div>
