@@ -96,6 +96,13 @@ a:hover {
 }
 
 
+/* image */
+
+figure {
+    text-align: center;
+}
+
+
 /* decoration */
 .decoration {
     position: fixed;
