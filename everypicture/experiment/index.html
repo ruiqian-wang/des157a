@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Picture Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Every Picture Experiment</h1>
+    <div class="image-container">
+        <img id="defaultImage" src="images/main.jpg" alt="Default Image of Chengdu" usemap="#image-map" class="active">
+        <img id="image1" src="images/1.jpg" alt="Image 1" class="overlay-image">
+        <img id="image2" src="images/2.jpg" alt="Image 2" class="overlay-image">
+        <img id="image3" src="images/3.jpg" alt="Image 3" class="overlay-image">
+        <img id="image4" src="images/4.jpg" alt="Image 4" class="overlay-image">
+        <img id="image5" src="images/5.jpg" alt="Image 5" class="overlay-image">
+    </div>
+
+    <map name="image-map">
+        <area alt="1" title="1" onclick="showImage('image1')" 
+            coords="620,386,651,439,736,447,784,414,852,291,874,158,863,66,798,38,745,64,706,191,696,226,676,276,647,335" 
+            shape="poly">
+        <area alt="2" title="2" onclick="showImage('image2')" 
+            coords="397,388,450,378,478,347,502,345,511,375,500,430,479,469,450,475,409,461,384,430" 
+            shape="poly">
+        <area alt="3" title="3" onclick="showImage('image3')" 
+            coords="483,497,516,449,572,435,597,474,600,529,581,593,562,599" 
+            shape="poly">
+        <area alt="4" title="4" onclick="showImage('image4')" 
+            coords="264,356,307,351,329,370,353,403,358,456,378,484,399,493,409,518,377,541,340,534,310,515,254,458,237,400,250,361" 
+            shape="poly">
+        <area alt="5" title="5" onclick="showImage('image5')" 
+            coords="404,597,387,637,404,685,442,727,479,738,496,730,492,653,480,595,451,575,416,583" 
+            shape="poly">
+    </map>
+
+
+</body>
+
+</html>
+
+
