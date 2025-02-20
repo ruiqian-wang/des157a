@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chengdu Travel Routes Explorer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+3D&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Experience Chengdu Like a Local</h1>
+    <!-- <p class="instruction-text">Click on different routes on the map to explore detailed travel information</p> -->
+    
+    <div class="content-wrapper">
+        <div class="left-column">
+            <div class="image-container">
+                <img id="defaultImage" src="images/main.jpg" alt="Interactive Map of Chengdu" usemap="#image-map" class="active">
+                <img id="image1" src="images/1.jpg" alt="Route 1" class="overlay-image">
+                <img id="image2" src="images/2.jpg" alt="Route 2" class="overlay-image">
+                <img id="image3" src="images/3.jpg" alt="Route 3" class="overlay-image">
+                <img id="image4" src="images/4.jpg" alt="Route 4" class="overlay-image">
+                <img id="image5" src="images/5.jpg" alt="Route 5" class="overlay-image">
+            </div>
+            
+            <map name="image-map">
+                <area alt="1" title="1" onclick="showImage('image1')" 
+                    coords="620,386,651,439,736,447,784,414,852,291,874,158,863,66,798,38,745,64,706,191,696,226,676,276,647,335" 
+                    shape="poly">
+                <area alt="2" title="2" onclick="showImage('image2')" 
+                    coords="397,388,450,378,478,347,502,345,511,375,500,430,479,469,450,475,409,461,384,430" 
+                    shape="poly">
+                <area alt="3" title="3" onclick="showImage('image3')" 
+                    coords="483,497,516,449,572,435,597,474,600,529,581,593,562,599" 
+                    shape="poly">
+                <area alt="4" title="4" onclick="showImage('image4')" 
+                    coords="264,356,307,351,329,370,353,403,358,456,378,484,399,493,409,518,377,541,340,534,310,515,254,458,237,400,250,361" 
+                    shape="poly">
+                <area alt="5" title="5" onclick="showImage('image5')" 
+                    coords="404,597,387,637,404,685,442,727,479,738,496,730,492,653,480,595,451,575,416,583" 
+                    shape="poly">
+            </map>
+        </div>
+
+        <div class="right-column">
+            <div id="route-details" class="route-details">
+                <div class="default-content">
+                    <h2>Welcome to Chengdu</h2>
+                    <p>Select a route on the map to view detailed information about that path.</p>
+                </div>
+     
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
