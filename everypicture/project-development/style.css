@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F5F7F6;
+    
+}
+
+/* background */
+
+
+main {
+    max-width: 800px;
+}
+
+h1 {
+    color: #353840;
+    font-family: Gluten;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0.8em;
+    margin-bottom: 0.6em;
+}
+
+.journals {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+}
+
+.journal-article {
+    border-radius: 0.625em;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.journal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em 1.8em 0.1em 1.8em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+    background: #F5F6F5;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
+}
+
+.journal-header h2 {
+    color: #353840;
+    font-family: Poppins;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.date {
+    color: #353840;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.journal-content {
+    color: #374151;
+    line-height: 1.6;
+    padding: 1.2em 1.8em 1.2em 1.8em;
+    font-family: Poppins;
+    font-size: 1.1em;
+}
+
+/* links */
+a {
+    text-decoration: none;
+    color: #CF5854;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+a:hover {
+    color: #A83431;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+
+/* image */
+
+figure {
+    text-align: center;
+}
+
+
+/* decoration */
+.decoration {
+    position: fixed;
+    width:200px;
+}
+
+#decoration-left {
+    left: 0;
+    top: 5%;
+}
+
+#decoration-right {
+
+    bottom: 0;
+    right: 5%;
+}
+
+
+/* footer  */
+
+footer {
+    bottom: 0;
+    margin-top: 2em;
+    padding: 2.4em;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.footer-links a {
+    font-family: "Comfortaa", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 800;
+    position: relative;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    border-bottom: 1px solid transparent;
+    background-color: #A83431;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-info {
+    font-size: 1em;
+    font-family: "Comfortaa", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+

@@ -9,7 +9,7 @@ body {
 h1 {
     color: #2c3e50;
     text-align: center;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.8em;
     font-family: "Freckle Face", cursive;
     font-size: 3.4em;
     color: #37364B;
@@ -57,9 +57,11 @@ h1 {
 }
 
 .image-container img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     display: none;
+    border-radius: 8px;
+    
 }
 
 .image-container img.active {
@@ -77,5 +79,6 @@ h1 {
 .overlay-image.active {
     opacity: 1;
     z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
