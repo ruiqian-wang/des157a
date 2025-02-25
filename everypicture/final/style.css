@@ -1,0 +1,200 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; 
+}
+
+h1 {
+    color: #CF5854;
+    font-family: "Freckle Face", serif;
+    font-size: 3.1rem;
+    font-weight: 400;
+    letter-spacing: 0.4125rem;
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 1.8em;
+}
+
+h2 {
+    color: #CF5854;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.625rem;
+}
+
+#defaultImage {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay-image {
+    display: none;
+    z-index: 2;
+}
+
+.active {
+    display: block;
+}
+
+.main-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-char {
+    position: absolute;
+    opacity: 0.6;
+    filter: blur(2px);
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-char.left {
+    left: 5%;
+    animation-delay: 0.5s;
+}
+
+.floating-char.right {
+    right: 5%;
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(3deg); }
+}
+
+/* Adjust floating characters for mobile */
+/* @media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .subtitle { font-size: 1rem; }
+    .image-container {
+        width: 95%;
+    }
+    .thumbnail-container {
+        flex-wrap: wrap;
+    }
+    .thumbnail {
+        width: 120px;
+        height: 80px;
+    }
+    .floating-char {
+        width: 100px;
+    }
+    .floating-char.left { left: 2%; }
+    .floating-char.right { right: 2%; }
+} */
+
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container.shifted {
+    justify-content: flex-start;
+    margin-left: 240px;
+}
+
+.context-box {
+    flex: 1;
+    background: #FEFCF2;
+    padding: 2rem;
+    border-radius: 0.625rem;
+    display: none;
+    color: #1A1A1A;
+    font-family: "Poppins", sans-serif;
+    opacity: 0;
+    margin-left: 2rem;
+    
+
+    height: 80vh; 
+    overflow-y: auto; 
+    position: fixed; 
+    right: 80px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 500px; 
+}
+
+.context-box.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Style the scrollbar for webkit browsers */
+/* .context-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.context-box::-webkit-scrollbar-track {
+    background: rgba(207, 88, 84, 0.1);
+    border-radius: 4px;
+}
+
+.context-box::-webkit-scrollbar-thumb {
+    background: rgba(207, 88, 84, 0.3);
+    border-radius: 4px;
+}
+
+.context-box::-webkit-scrollbar-thumb:hover {
+    background: rgba(207, 88, 84, 0.5);
+} */
+.context-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.context-text {
+    line-height: 1.6;
+}
+   
+h1, h2, .main-container {
+    transition: margin-left 0.5s ease, text-align 0.5s ease;
+}
+
+.shifted {
+    margin-left: 200px;
+}
+
+h1.shifted, h2.shifted {
+    text-align: center;
+    width: 100%;
+    transform: translateX(-420px);
+}
+
+.floating-char {
+    transition: opacity 0.3s ease;
+}
+
+.context-box {
+    transition: opacity 0.3s ease;
+}

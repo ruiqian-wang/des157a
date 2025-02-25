@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Chengdu Like a Local</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- google font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+3D&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Experience Chengdu Like a Local</h1>
+    <h2>Select a route on the map to view detailed information about that path</h2>
+
+    <div class="main-content">
+        <img src="images/cheng.png" alt="Chinese character Cheng" class="floating-char left">
+        <div class="main-container">
+            <div class="image-container">
+                <img id="defaultImage" src="images/default.jpg" alt="Map of Chengdu with highlighted routes" usemap="#image-map" class="active">
+                <img id="hover1" src="images/hover1.jpg" alt="Route 1 Hover" class="overlay-image">
+                <img id="hover2" src="images/hover2.jpg" alt="Route 2 Hover" class="overlay-image">
+                <img id="hover3" src="images/hover3.jpg" alt="Route 3 Hover" class="overlay-image">
+                <img id="hover4" src="images/hover4.jpg" alt="Route 4 Hover" class="overlay-image">
+                <img id="hover5" src="images/hover5.jpg" alt="Route 5 Hover" class="overlay-image">
+                <img id="image1" src="images/1.jpg" alt="Route 1" class="overlay-image">
+                <img id="image2" src="images/2.jpg" alt="Route 2" class="overlay-image">
+                <img id="image3" src="images/3.jpg" alt="Route 3" class="overlay-image">
+                <img id="image4" src="images/4.jpg" alt="Route 4" class="overlay-image">
+                <img id="image5" src="images/5.jpg" alt="Route 5" class="overlay-image">
+            </div>
+            <div class="context-box">
+                <h3 class="context-title"></h3>
+                <p class="context-text"></p>
+            </div>
+        </div>
+        <img src="images/du.png" alt="Chinese character Du" class="floating-char right">
+    </div>
+
+    <map name="image-map">
+        <area alt="1" title="1" href="#" coords="517,24,549,32,570,76,568,131,546,223,506,271,478,292,425,286,408,263,410,232,444,174,469,82,487,42" shape="poly">
+        <area alt="2" title="2" href="#" coords="289,248,307,229,328,222,333,250,320,302,300,315,264,297,247,278,263,254" shape="poly">
+        <area alt="3" title="3" href="#" coords="318,327,337,293,372,286,392,306,392,352,371,393,341,348" shape="poly">
+        <area alt="4" title="4" href="#" coords="177,230,209,236,230,261,235,307,254,316,267,333,258,350,226,352,166,300,154,264,160,242" shape="poly">
+        <area alt="5" title="5" href="#" coords="252,434,265,390,296,374,319,406,322,452,316,483,283,477" shape="poly">
+    </map>
+
+    <!-- <h2>Click anywhere on the page to go back and view different routes!</h2> -->
+</body>
+
+</html>
