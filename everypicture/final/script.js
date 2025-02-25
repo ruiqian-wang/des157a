@@ -8,7 +8,7 @@ const contextBox = document.querySelector('.context-box');
 const areaContent = {
     1: {
         title: "Route 1: 熊猫基地 (Panda Base) – 建设路 (Jianshe Road) – 东郊记忆 (Eastern Suburb Memory)",
-        introduction: "A journey through the heart of traditional Chengdu, where every corner tells a story.",
+        introduction: "Discover the nostalgia of childhood adventures and the local culture in Chengdu’s most iconic and artistic neighborhoods.",
         sections: [
             {
                 heading: "Panda Base",
@@ -44,7 +44,7 @@ const areaContent = {
                 images: [
                   {
                       url: "images/dongjiao.jpg",
-                      caption: "Eastern Suburb Memory"
+                      caption: "One of the shops in Eastern Suburb Memory"
                   },
               ],
             }
@@ -53,14 +53,14 @@ const areaContent = {
     },
     2: {
         title: "Route 2: 文殊院 (Wenshu Monastery) – 天府广场 (Tianfu Square) – 人民公园 (People’s Park)",
-        introduction: "Explore the contemporary side of Chengdu.",
+        introduction: "Experience the community spirit that capture the heart of Chengdu life.",
         sections: [
             {
                 heading: "Wenshu Monastery",
                 content: "The peaceful atmosphere and the faint scent of incense offer a much-needed escape from the city’s fast pace. My favorite part? Sipping tea under the ancient trees, listening to the murmur of visitors. It’s where I go to slow down.",
                 image: {
                     url: "images/wenshu.jpg",
-                    caption: "Taikoo Li shopping district"
+                    caption: "Chinese character 'happiness' on the wall"
                 }
             },
             {
@@ -68,7 +68,7 @@ const areaContent = {
                 content: "Tianfu Square is where modern Chengdu meets its historical legacy. I remember coming here as a child, staring in awe at the giant Mao statue. My middle school was right next to Tianfu Square, and it became a familiar landmark during my daily routines. Passing by it every day, I watched the city evolve around it, blending the old with the new.",
                 image: {
                   url: "images/tianfu.jpg",
-                  caption: "Taikoo Li shopping district"
+                  caption: "Tianfu Square where Mao Zedong statue is"
               }
             },
             {
@@ -77,11 +77,11 @@ const areaContent = {
                 images: [
                 {
                     url: "images/renmin1.jpg",
-                    caption: "People’s Park"
+                    caption: "Drinking tea next to the lake"
                 },
                 {
                     url: "images/renmin2.jpg",
-                    caption: "Street food vendors"
+                    caption: "Chilling in the park"
                 }
             ],
               
@@ -90,7 +90,7 @@ const areaContent = {
     },
     3: {
         title: "Route 3: 太古里 (Taikoo Li) – 宽窄巷子 (Kuan Zhai Alley) – 九眼桥 (Jiuyanqiao)",
-        introduction: "Discover the rich cultural heritage of Chengdu.",
+        introduction: "Explore the perfect blend of modern chic and historical charm in the most fashionable and lively districts.",
         sections: [
             {
                 heading: "Taikoo Li",
@@ -105,7 +105,7 @@ const areaContent = {
                 content: "Walking through Kuan Zhai Alley feels like a stroll through history. The narrow alleys, with their preserved Qing Dynasty architecture, always make me feel connected to Chengdu’s past. I especially love the artisan shops with handcrafted souvenirs – they remind me of family outings and the joy of discovering unique trinkets.",
                 image: {
                   url: "images/kuanzhai.jpg",
-                  caption: "Kuanzhai Alley"
+                  caption: "Night view of Kuanzhai Alley"
               }
             },
             {
@@ -113,21 +113,21 @@ const areaContent = {
                 content: "Jiuyanqiao is my favorite spot to experience Chengdu’s nightlife. The bars lining the riverside come alive with neon lights and live music. I’ve spent countless evenings here with friends, laughing, singing, and making unforgettable memories.",
                 image: {
                   url: "images/jiuyanqiao.jpg",
-                  caption: "Jiuyanqiao"
+                  caption: "Walking along the river"
               }
             }
         ],
     },
     4: {
         title: "Route 4: 四川博物馆 (Sichuan Museum) – 锦里 (Jinli) – 杜甫草堂 (Du Fu Thatched Cottage) – 武侯祠 (Wuhou Shrine)",
-        text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        text: "Travel through time and culture with Chengdu’s history, poetry, and legendary tales.",
         sections: [
           {
               heading: "Sichuan Museum",
               content: "Sichuan Museum is where I go to reconnect with my cultural roots. From ancient relics to exquisite Sichuan embroidery, each exhibit feels like a piece of home. It’s a reminder of the rich history and heritage that I carry with me.",
               image: {
                   url: "images/museum.jpg",
-                  caption: "Sichuan Museum"
+                  caption: "Exhibition of ancient Chinese artifacts"
               }
           },
           {
@@ -135,7 +135,7 @@ const areaContent = {
               content: "Jinli’s bustling streets are always full of life. The colorful lanterns, street performances, and aroma of local snacks create a festive atmosphere. It reminds me of childhood visits during Chinese New Year.",
               image: {
                 url: "images/jinli.jpg",
-                caption: "Jinli"
+                caption: "Jinli's street vendors"
             }
           },
           {
@@ -143,21 +143,21 @@ const areaContent = {
               content: "Visiting Du Fu’s Thatched Cottage is like stepping into a poet’s dream. I always feel a sense of calm walking through the lush gardens, imagining Du Fu composing poems under the ancient trees.",
               image: {
                 url: "images/dufu.jpg",
-                caption: "Du Fu Thatched Cottage"
+                caption: "Du Fu's Thatched Cottage"
             }
           }
       ],
     },
     5: {
         title: "Route 5: 玉林路 (Yulin Road) – 锦城印象火锅 (Jincheng Impression Hotpot) – 双子塔 (Twin Towers)",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        text: "Feel the pulse of Chengdu’s urban lifestyle with a mix of artistic vibes, vibrant food culture, and futuristic cityscapes.",
         sections: [
           {
               heading: "Yulin Road",
               content: "Yulin Road feels like the epitome of Chengdu’s laid-back lifestyle. It’s a place where old meets new, with cozy teahouses beside modern cafes. I love the artistic vibe, surrounded by murals and indie music.",
               image: {
                   url: "images/yulin.jpg",
-                  caption: "Yulin Road"
+                  caption: "Vibrant merchandise shops"
               }
           },
           {
@@ -165,7 +165,7 @@ const areaContent = {
               content: "No journey through Chengdu is complete without hotpot, and Jincheng Impression Hotpot is my all-time favorite. I’ve spent countless evenings here with friends and family, laughing over spicy broths and daring each other to eat the fieriest peppers.",
               image: {
                 url: "images/hotpot.jpg",
-                caption: "Jincheng Impression Hotpot"
+                caption: "Hotpot"
             }
           },
           {
@@ -173,7 +173,7 @@ const areaContent = {
               content: "The Twin Towers are a symbol of Chengdu’s rapid modernization. I remember the first time I saw them, towering above the cityscape with their sleek, futuristic design. It felt surreal to witness how fast the city was growing.",
               image: {
                 url: "images/twin.jpg",
-                caption: "Twin Towers"
+                caption: "Twin Towers showing 'I love Chengdu'"
             }
           }
         ],
