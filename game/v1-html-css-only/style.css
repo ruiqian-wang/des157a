@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #F5F5E9;
+    overflow: hidden;
+}
+
+h1 {
+    color: #344131;
+    font-family: Mansalva;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 0.4em;
+}
+
+.header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.4em;
+    gap: 1rem;
+
+}
+
+#table {
+    position: fixed;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#scene {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#person1, #person2 {
+    z-index: 1;
+    bottom: 0;
+}
+
+#table {
+    z-index: 0;
+}
