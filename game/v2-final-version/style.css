@@ -40,19 +40,64 @@ h1 {
     gap: 1rem;
 }
 
+/* Icon buttons (sound/info/close) */
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #344131;
+    background: rgba(255, 255, 255, 0.55);
+    color: #344131;
+    border-radius: 999px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.05s;
+}
+
+.icon-button:hover {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.icon-button:active {
+    transform: translateY(1px);
+}
+
+.icon-button:focus-visible {
+    outline: 3px solid rgba(52, 65, 49, 0.35);
+    outline-offset: 3px;
+}
+
+#sound-toggle[aria-pressed="false"] {
+    opacity: 0.65;
+}
+
+#rules-close {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    line-height: 1;
+}
+
 /* Player Scores */
 .player-scores {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    gap: 70em;
+    gap: clamp(2rem, 30vw, 28rem);
 }
 
 .player1-score, .player2-score {
     color: #344131;
     font-family: Mansalva;
     font-size: 2.2rem;
+}
+
+.player1-score.is-active,
+.player2-score.is-active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 /* Game Scene */
@@ -107,7 +152,6 @@ h1 {
 
 /* Game Buttons */
 .game-button {
-    position: absolute;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid #344131;
@@ -117,6 +161,7 @@ h1 {
     font-size: 24px;
     cursor: pointer;
     transition: all 0.3s;
+    position: relative;
 }
 
 .game-button:hover {
@@ -133,6 +178,10 @@ h1 {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.game-button--floating {
+    position: absolute;
 }
 
 #person1, #person2 {
@@ -215,10 +264,75 @@ h1 {
     margin: 0;
 }
 
-.game-button {
-    margin-top: 8rem;
+/* Overlay buttons should flow naturally inside their content */
+#win-message .game-button,
+.message .game-button {
+    position: static;
+    margin-top: 0;
 }
 
-#new-round {
-    margin-top: 10rem;
+/* Modal (rules) */
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+}
+
+.modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.modal__panel {
+    position: relative;
+    max-width: 720px;
+    width: calc(100% - 2rem);
+    margin: 18vh auto 0 auto;
+    background: #F5F5E9;
+    border: 2px solid #344131;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 1.2rem 1.4rem;
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.modal__header h2 {
+    font-family: Mansalva;
+    color: #344131;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.modal__body {
+    color: #344131;
+    font-family: Mansalva;
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.modal__body ul {
+    margin: 0.5rem 0 0.7rem 1.3rem;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.rules-shortcuts {
+    opacity: 0.9;
+    font-size: 1.15rem;
 }
