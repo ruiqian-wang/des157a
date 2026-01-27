@@ -4,6 +4,13 @@ html, body {
     background: #F5F5E9;
     height: 100%;
     position: relative;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Ensure images scale with their container */
@@ -27,9 +34,10 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    padding-top: 0.4em;
+    padding: 0.4em 1rem 0.5rem 1rem;
     position: relative;
     z-index: 2;
+    flex-shrink: 0;
 }
 
 .header-icon {
@@ -83,15 +91,31 @@ h1 {
 .player-scores {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    gap: clamp(2rem, 30vw, 28rem);
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
 }
 
 .player1-score, .player2-score {
     color: #344131;
     font-family: Mansalva;
     font-size: 2.2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.player1-score {
+    text-align: left;
+}
+
+.player2-score {
+    text-align: right;
 }
 
 .player1-score.is-active,
@@ -109,6 +133,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 1;
 }
 
 #table {
@@ -335,4 +360,134 @@ h1 {
 .rules-shortcuts {
     opacity: 0.9;
     font-size: 1.15rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .player1-score, .player2-score {
+        font-size: 1.8rem;
+    }
+    
+    .player-scores {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .player1-score, .player2-score {
+        font-size: 1.5rem;
+    }
+    
+    .player-scores {
+        padding: 0 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .player1-score h2,
+    .player2-score h2 {
+        font-size: 1.2rem;
+        margin: 0.2rem 0;
+    }
+    
+    .player1-score p,
+    .player2-score p {
+        font-size: 1.1rem;
+        margin: 0.2rem 0;
+    }
+    
+    #person1, #person2 {
+        width: 280px;
+    }
+    
+    .tile-pile img {
+        width: 120px;
+    }
+    
+    .game-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .header {
+        gap: 1.5rem;
+        padding: 0.2em 0.5rem 0.3rem 0.5rem;
+    }
+    
+    .player1-score, .player2-score {
+        font-size: 1.2rem;
+    }
+    
+    .player-scores {
+        padding: 0 0.75rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .player1-score h2,
+    .player2-score h2 {
+        font-size: 1rem;
+        margin: 0.1rem 0;
+    }
+    
+    .player1-score p,
+    .player2-score p {
+        font-size: 0.95rem;
+        margin: 0.1rem 0;
+    }
+    
+    #person1, #person2 {
+        width: 200px;
+    }
+    
+    .tile-pile img {
+        width: 100px;
+    }
+    
+    .game-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .icon-button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Ensure scores stay visible above game scene */
+    .player-scores {
+        position: relative;
+        z-index: 5;
+    }
+}
+
+@media (max-width: 360px) {
+    .player-scores {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .player1-score,
+    .player2-score {
+        text-align: center;
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
 }
